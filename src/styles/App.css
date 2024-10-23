@@ -7,3 +7,8 @@
 .custom-card {
   margin: 10px;
 }
+
+.body {
+  background: linear-gradient(135deg, #FFA500, #FF6347, #8B0000)!important;
+  font-family: 'pokemon', sans-serif;
+}

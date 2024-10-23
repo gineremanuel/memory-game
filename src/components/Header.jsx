@@ -1,10 +1,19 @@
-const Header = ( { score, bestScore }) => {
+import '../styles/header.css';
+
+const Header = ( { score, highScore }) => {
   return (
     <>
-      <h1>Memory Game</h1>
-      <h4>Get points by clicking on an image but don't click on any more than once!</h4>
-      <p>Score: {score}</p>
-      <p>Best Score: {bestScore}</p>
+    <div className="wrapper">
+      <div className="header">
+        <h1 className="title">Memory Game</h1>
+        <div className="score-board">
+          <p className="score">Score: {score}</p>
+          <p className="high-score">High Score: {highScore}</p>
+        </div>
+      </div>
+      <p className="description">Get points by clicking on an image but don't click on any more than once!</p>   
+    </div>
+         
     </>
   )
 }
