@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import './styles/main.css'
 import './styles/App.css'
-import useFetchPokemons from './components/useFetchPokemons';
+import useFetchPokemons from './hooks/useFetchPokemons';
 import Card from './components/Card';
 import Header from './components/Header';
 
