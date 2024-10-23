@@ -1,4 +1,6 @@
 
+import '../styles/card.css'
+
 const Card = ({pokeImg, name, onClick}) => {
   return (
     <div className="card custom-card" onClick={onClick}>

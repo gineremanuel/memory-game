@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "Pokemon";
+  src: url("/assets/fonts/Pokemon\ Solid.ttf") format("truetype");
+  font-style: normal;
+}
+
+.card-title {
+  text-align: center;
+  text-transform: capitalize;
+  font-family: 'Pokemon';
+  font-size: 40px;
+  color: #ffcc00!important;
+  text-shadow: 
+      3px 3px 0 #1660a9,
+      6px 6px 0 #0f4173;
+  letter-spacing: 3px;  
+}
+
+.custom-card {
+  background: linear-gradient(145deg, #3a3a3a, #1c1c1c);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.3s ease,
+  background 0.3s ease;
+}
+
+.card:hover {
+  background: linear-gradient(145deg, #4a4a4a, #2c2c2c);
+  transform: translateY(-10px);
+}
