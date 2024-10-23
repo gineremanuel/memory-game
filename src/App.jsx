@@ -5,14 +5,12 @@ import useFetchPokemons from './hooks/useFetchPokemons';
 import Card from './components/Card';
 import Header from './components/Header';
 
-
-
 function App() {
   const arrayOfPokemons = useFetchPokemons(10);
   const [ sortedArrayOfPokemons, setSortedArrayOfPokemons] = useState([]);
   const [ repeteadId, setRepeteadId ] = useState([]);
   const [ score, setScore ] = useState(0);
-  const [ bestScore, setBestScore ] = useState(0);
+  const [ highScore, setHighScore ] = useState(0);
 
 
   const shuffle = (array) => {
@@ -38,32 +36,32 @@ function App() {
       const newScore = score + 10
       setScore(newScore)
       setRepeteadId([...repeteadId, id])
-      setBestScore((prevBestScore) => {
-        return newScore > prevBestScore ? newScore : prevBestScore;
+      setHighScore((prevHighScore) => {
+        return newScore > prevHighScore ? newScore : prevHighScore;
       });
     }
     shuffle(sortedArrayOfPokemons)
   }
 
     return (
-    <>
+    <div className="body">
       <Header
         score = { score }
-        bestScore = { bestScore }
+        highScore = { highScore }
       />
       <div className="cards">
-      {sortedArrayOfPokemons.length === 0
-      ? <p>Is loading...</p>
-      :  sortedArrayOfPokemons.map((pokemon) => (
-          <Card 
-            key = { pokemon.id } 
-            pokeImg = { pokemon.img }  
-            name = { pokemon.name }
-            onClick = { () => handleClick(pokemon.id) }
-          />
-        ))}
+        {sortedArrayOfPokemons.length === 0
+        ? <p>Is loading...</p>
+        :  sortedArrayOfPokemons.map((pokemon) => (
+            <Card 
+              key = { pokemon.id } 
+              pokeImg = { pokemon.img }  
+              name = { pokemon.name }
+              onClick = { () => handleClick(pokemon.id) }
+            />
+          ))}
       </div>
-    </>
+    </div>
   )
 }
 
