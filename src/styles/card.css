@@ -20,6 +20,8 @@
   background: linear-gradient(145deg, #3a3a3a, #1c1c1c);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
   text-align: center;
+  margin: 10px;
+  cursor: pointer;
   transition: transform 0.3s ease,
   background 0.3s ease;
 }
